@@ -1,0 +1,60 @@
+---
+id: 0
+name: Devnet deployment
+network: devnet
+stacks-node: "http://localhost:20443"
+bitcoin-node: "http://devnet:devnet@localhost:18443"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: iAmm
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 12750
+            path: contracts/interfaces/iAmm.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: iDao
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 6750
+            path: contracts/interfaces/iDao.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: iEmergencyBrake
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 3250
+            path: contracts/interfaces/iEmergencyBrake.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: iFeeManager
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 11310
+            path: contracts/interfaces/iFeeManager.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: iLiquidity
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 7120
+            path: contracts/interfaces/iLiquidity.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: iMetrics
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 6040
+            path: contracts/interfaces/iMetrics.clar
+            anchor-block-only: true
+            clarity-version: 2
+        - contract-publish:
+            contract-name: realtytoken
+            expected-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            cost: 19190
+            path: contracts/realtytoken.clar
+            anchor-block-only: true
+            clarity-version: 2
+      epoch: "2.5"

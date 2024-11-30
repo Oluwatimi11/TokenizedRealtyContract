@@ -19,9 +19,12 @@ import { vitestSetupFilePath, getClarinetVitestsArgv } from "@hirosystems/clarin
     - vitest run -- --coverage --costs          # collect coverage and cost reports
 */
 
+    //environment: "clarinet", // use vitest-environment-clarinet
+
 export default defineConfig({
   test: {
-    environment: "clarinet", // use vitest-environment-clarinet
+    globals: true, // For global variables like describe, test, expect
+    environment: 'node', // Adjust the environment as needed
     pool: "forks",
     poolOptions: {
       threads: { singleThread: true },
@@ -39,4 +42,3 @@ export default defineConfig({
     },
   },
 });
-

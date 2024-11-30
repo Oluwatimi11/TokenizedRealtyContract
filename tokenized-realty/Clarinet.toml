@@ -5,10 +5,42 @@ authors = []
 telemetry = true
 cache_dir = './.cache'
 requirements = []
+
 [contracts.realtytoken]
 path = 'contracts/realtytoken.clar'
 clarity_version = 2
 epoch = 2.5
+
+[contracts.iAmm]
+path = 'contracts/interfaces/iAmm.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.iFeeManager]
+path = 'contracts/interfaces/iFeeManager.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.iLiquidity]
+path = 'contracts/interfaces/iLiquidity.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.iEmergencyBrake]
+path = 'contracts/interfaces/iEmergencyBrake.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.iDao]
+path = 'contracts/interfaces/iDao.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.iMetrics]
+path = 'contracts/interfaces/iMetrics.clar'
+clarity_version = 2
+epoch = 2.5
+
 [repl.analysis]
 passes = ['check_checker']
 
